@@ -4,10 +4,17 @@ function createParagraph(text) {
     return paragraph;
 }
 
-function createDiv(divClass, text) {
+function createDiv(text, divId, ...divClasses) {
     let div = document.createElement("div");
-    div.classList.add(divClass);
-    div.innerText = text;
+    if (divId) {
+        div.id = divId;
+    }
+    if (text !== "") {
+        div.innerText = text;
+    }
+    divClasses.forEach((divClass) => {
+        div.classList.add(divClass);
+    });
     return div;
 }
 

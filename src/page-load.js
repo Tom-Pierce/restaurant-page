@@ -1,6 +1,6 @@
 import backgroundImg from "../imgs/background.jpg"
-import chefImg from "../imgs/chef.png"
-import { createParagraph } from "./tools";
+import createHome from "./home";
+import { createParagraph, createDiv} from "./tools";
 
 export default function pageLoad() {
     document.body.innerHTML = "";
@@ -16,46 +16,51 @@ export default function pageLoad() {
     const footer = document.createElement("div");
     footer.classList.add("footer");
     document.body.appendChild(footer);
-
+    
     // populate header content
     const restaurantName = document.createElement("h1");
     restaurantName.textContent = "Mozzafiato"
     restaurantName.classList.add("restaurant-name")
     header.appendChild(restaurantName);
-
+    
     //create each seperate tab div
     const tabBar = document.createElement("div");
     tabBar.classList.add("tab-bar");
     header.appendChild(tabBar);
+    
+    tabBar.appendChild(createDiv("Home", "home-tab-selector", "tab-selector", "active"));
+    tabBar.appendChild(createDiv("Menu", "menu-tab-selector", "tab-selector"));
+    tabBar.appendChild(createDiv("Contact", "contact-tab-selector", "tab-selector"));
 
-    let homeBar = document.createElement("div");
-    homeBar.classList.add("tab-selector", "active");
-    homeBar.textContent = "Home"
-    tabBar.appendChild(homeBar);
+    // const homeTab = document.createElement("div");
+    // homeTab.classList.add("tab-selector", "active");
+    // homeTab.textContent = "Home";
+    // tabBar.appendChild(homeTab);
+    // homeTab.addEventListener("click", () =>{
+    //     if(homeTab.classList.contains("active")) return;
+    //     console.log("home");
+    //     createHome();
+    // });
 
-    let menuBar = document.createElement("div");
-    menuBar.classList.add("tab-selector");
-    menuBar.textContent = "Menu"
-    tabBar.appendChild(menuBar);
+    // const menuTab = document.createElement("div");
+    // menuTab.classList.add("tab-selector");
+    // menuTab.textContent = "Menu";
+    // tabBar.appendChild(menuTab);
+    // menuTab.addEventListener("click", () =>{
+    //     if(menuTab.classList.contains("active")) return;
+    //     console.log("menu")
+    // });
 
-    let contactBar = document.createElement("div");
-    contactBar.classList.add("tab-selector");
-    contactBar.textContent = "Contact"
-    tabBar.appendChild(contactBar);
 
-    //populate main content
-    const home = document.createElement("div");
-    home.classList.add("home");
-    main.appendChild(home);
-
-    const chefImage = new Image();
-    chefImage.src = chefImg;
-
-    home.appendChild(createParagraph("Best Pizza in Ireland"));
-    home.appendChild(createParagraph("Made with passion since 1908"));
-    home.appendChild(chefImage);
-    home.appendChild(createParagraph("Order online or visit us!"));
-
+    // const contactTab = document.createElement("div");
+    // contactTab.classList.add("tab-selector");
+    // contactTab.textContent = "Contact";
+    // tabBar.appendChild(contactTab);
+    // contactTab.addEventListener("click", () =>{
+    //     if(contactTab.classList.contains("active")) return;
+    //     console.log("contact")
+    // });
+    
     // populate footer
     footer.appendChild(createParagraph("Copyright © 2022 Thom"));
 }
