@@ -8,7 +8,6 @@ export default function createMenu(){
     const menu = document.createElement("div");
     menu.classList.add("menu");
     main.appendChild(menu);
-    console.log(menu);
 
     menuItems.forEach((dish) => {
         menu.appendChild(createDishDiv(dish.name, dish.ingredients, dish.img));

@@ -2,7 +2,7 @@ import "./styles.css";
 import pageLoad from "./page-load.js";
 import createHome from "./home.js";
 import createMenu from "./menu.js";
-import createContact from "./contact.js"
+import createContact from "./contact.js";
 
 function changeTab(e) {
   if (e.target.classList.contains("active")) return;
@@ -31,9 +31,7 @@ function changeTab(e) {
   }
 }
 pageLoad();
-createMenu(); 
 createHome();
-createContact();
 
 (function addClick() {
   const tabSelectors = document.querySelectorAll(".tab-selector");

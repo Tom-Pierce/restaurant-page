@@ -1,4 +1,4 @@
-import { createDiv, createParagraph } from "./tools";
+import { createParagraph } from "./tools";
 import chefImg from "../imgs/chef.png"
 
 export default function createHome() {
