@@ -1,5 +1,4 @@
 import backgroundImg from "../imgs/background.jpg"
-import createHome from "./home";
 import { createParagraph, createDiv} from "./tools";
 
 export default function pageLoad() {
@@ -32,35 +31,6 @@ export default function pageLoad() {
     tabBar.appendChild(createDiv("Menu", "menu-tab-selector", "tab-selector"));
     tabBar.appendChild(createDiv("Contact", "contact-tab-selector", "tab-selector"));
 
-    // const homeTab = document.createElement("div");
-    // homeTab.classList.add("tab-selector", "active");
-    // homeTab.textContent = "Home";
-    // tabBar.appendChild(homeTab);
-    // homeTab.addEventListener("click", () =>{
-    //     if(homeTab.classList.contains("active")) return;
-    //     console.log("home");
-    //     createHome();
-    // });
-
-    // const menuTab = document.createElement("div");
-    // menuTab.classList.add("tab-selector");
-    // menuTab.textContent = "Menu";
-    // tabBar.appendChild(menuTab);
-    // menuTab.addEventListener("click", () =>{
-    //     if(menuTab.classList.contains("active")) return;
-    //     console.log("menu")
-    // });
-
-
-    // const contactTab = document.createElement("div");
-    // contactTab.classList.add("tab-selector");
-    // contactTab.textContent = "Contact";
-    // tabBar.appendChild(contactTab);
-    // contactTab.addEventListener("click", () =>{
-    //     if(contactTab.classList.contains("active")) return;
-    //     console.log("contact")
-    // });
-    
     // populate footer
     footer.appendChild(createParagraph("Copyright © 2022 Thom"));
 }

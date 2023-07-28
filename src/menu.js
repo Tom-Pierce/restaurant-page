@@ -24,8 +24,8 @@ function createDishDiv(name, ingredients, img){
     const dishImg = document.createElement("img");
     dishImg.src = img;
 
-    dish.appendChild(dishName);
     dish.appendChild(dishImg);
+    dish.appendChild(dishName);
     dish.appendChild(createParagraph(ingredients));
 
     return dish;

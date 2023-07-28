@@ -31,7 +31,9 @@ function changeTab(e) {
   }
 }
 pageLoad();
+createMenu(); 
 createHome();
+createContact();
 
 (function addClick() {
   const tabSelectors = document.querySelectorAll(".tab-selector");
